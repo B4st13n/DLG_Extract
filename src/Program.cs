@@ -45,8 +45,12 @@ namespace TlkToSql
             #endregion
 
             #region Read DLG files
-            string[] paths = Directory.GetFiles(args[0], "*.TLK", SearchOption.AllDirectories);
+            string[] dlgPaths = Directory.GetFiles(args[0], "*.DLG", SearchOption.AllDirectories);
             var dlgReader = new DlgFileBinaryReader();
+            foreach (var path in dlgPaths)
+            {
+                var dlgF
+ile            }
             var dlgFile = dlgReader.Read(args[1]);
             Console.WriteLine($"Added {dlgFile.States.Count} entries");
             #endregion

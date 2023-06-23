@@ -10,7 +10,7 @@ namespace TlkToSql
     {
         public class DlgFileBinaryReader
         {
-            public DlgFile Read(string filename)
+            public DlgFile Read(string filename) // C:\Users\Bastienv\OneDrive\Projects\Baldur's Gate Project\Assets
             {
                 using var fs = new FileStream(filename, FileMode.Open, FileAccess.Read);
                 var f = Read(fs);
