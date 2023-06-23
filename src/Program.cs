@@ -32,13 +32,20 @@ namespace TlkToSql
                 return;
             }
 
-            #region Read TLK file
+            #region Read TLK files
+            string[] tlkPaths = Directory.GetFiles(args[0], "*.TLK", SearchOption.AllDirectories);
             var tlkReader = new TlkFileBinaryReader();
-            var tlkFile = tlkReader.Read(args[0]);
-            Console.WriteLine($"Added {tlkFile.Strings.Count} entries");
+            var tlkFiles = new List<TlkFile>();
+            foreach (var path in tlkPaths)
+            {
+                var tlkFile = tlkReader.Read(path);
+                tlkFiles.Add(tlkFile);
+                Console.WriteLine($"Added {tlkFile.Strings.Count} entries");
+            }
             #endregion
 
-            #region Read DLG file
+            #region Read DLG files
+            string[] paths = Directory.GetFiles(args[0], "*.TLK", SearchOption.AllDirectories);
             var dlgReader = new DlgFileBinaryReader();
             var dlgFile = dlgReader.Read(args[1]);
             Console.WriteLine($"Added {dlgFile.States.Count} entries");
@@ -50,12 +57,15 @@ namespace TlkToSql
             {
                 var dialog = new Dialog()
                 {
+                    Name = dlgFile.CharacterName,
                     Strref = state.Strref,
                     Text = tlkFile.Strings.Where(y => y.Strref == state.Strref).SingleOrDefault()?.Text,
                 };
                 dialogs.Add(dialog);
             }
             #endregion
+
+
         }
 
         static void ShowUsage()

@@ -14,6 +14,7 @@ namespace TlkToSql
             {
                 using var fs = new FileStream(filename, FileMode.Open, FileAccess.Read);
                 var f = Read(fs);
+                f.CharacterName = Path.GetFileNameWithoutExtension(filename);
                 return f;
             }
 
@@ -50,8 +51,7 @@ namespace TlkToSql
 
                 var dlg = new DlgFile
                 {
-                    //LangugeId = header.LanguageId
-                    // Save the character name here
+                    
                 };
 
                 int stringIndex = 0;

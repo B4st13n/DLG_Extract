@@ -2,7 +2,7 @@
   "profiles": {
     "TlkToSql": {
       "commandName": "Project",
-      "commandLineArgs": "\"C:\\Users\\Bastienv\\OneDrive\\Projects\\Baldur's Gate Project\\Assets\\Dialogs\\TLK\\dialog.tlk\" \"C:\\Users\\Bastienv\\OneDrive\\Projects\\Baldur's Gate Project\\Assets\\Dialogs\\DLG\\IMOEN.DLG\""
+      "commandLineArgs": "Project\\Assets"
     }
   }
 }
