@@ -2,7 +2,7 @@
   "profiles": {
     "TlkToSql": {
       "commandName": "Project",
-      "commandLineArgs": "Project\\Assets"
+      "commandLineArgs": "\"C:\\Users\\basti\\source\\repos\\DLG_Extract\\src\\Resources\""
     }
   }
 }
