@@ -3,7 +3,7 @@
 using System;
 using System.Collections.Generic;
 
-namespace TlkToSql.Model
+namespace DlgExtract.Model
 {
     [Serializable]
     public class DlgFile

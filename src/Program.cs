@@ -3,10 +3,9 @@ using System.Collections.Generic;
 using System.IO;
 using System.Linq;
 using System.Text.RegularExpressions;
-using TlkToSql.Database;
-using TlkToSql.Model;
+using DlgExtract.Model;
 
-namespace TlkToSql
+namespace DlgExtract
 {
     partial class Program
     {

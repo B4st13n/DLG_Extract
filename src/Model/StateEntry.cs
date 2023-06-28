@@ -1,6 +1,6 @@
 ﻿using System;
 
-namespace TlkToSql.Model
+namespace DlgExtract.Model
 {
     [Serializable]
     public class StateEntry

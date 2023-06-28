@@ -1,4 +1,4 @@
-﻿namespace TlkToSql.Model
+﻿namespace DlgExtract.Model
 {
     public enum StringEntryType
     {

@@ -25,7 +25,7 @@
 using System;
 using System.Runtime.InteropServices;
 
-namespace TlkToSql.Model
+namespace DlgExtract.Model
 {
     [StructLayout(LayoutKind.Sequential, Pack = 1)]
     struct DlgHeaderBinary

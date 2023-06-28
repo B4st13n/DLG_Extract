@@ -4,7 +4,7 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 
-namespace TlkToSql.Model
+namespace DlgExtract.Model
 {
     internal class Dialog
     {

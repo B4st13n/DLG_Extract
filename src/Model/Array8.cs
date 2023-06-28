@@ -1,7 +1,7 @@
 ﻿using System;
 using System.Runtime.InteropServices;
 
-namespace TlkToSql.Model
+namespace DlgExtract.Model
 {
     [Serializable]
     [StructLayout(LayoutKind.Sequential, Pack = 1)]
