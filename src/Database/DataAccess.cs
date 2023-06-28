@@ -2,9 +2,9 @@
 using System.Collections.Generic;
 using System.Data.SQLite;
 using System.IO;
-using TlkToSql.Model;
+using DlgExtract.Model;
 
-namespace TlkToSql.Database
+namespace DlgExtract.Database
 {
     public class DataAccess : IDisposable
     {

@@ -2,7 +2,7 @@
 using System.IO;
 using System.Runtime.InteropServices;
 
-namespace TlkToSql
+namespace DlgExtract
 {
     public class Common
     {

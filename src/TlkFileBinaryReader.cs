@@ -1,10 +1,10 @@
 ﻿using System.Collections.Generic;
 using System.IO;
-using TlkToSql.Model;
+using DlgExtract.Model;
 using System;
 using System.Reflection.PortableExecutable;
 
-namespace TlkToSql
+namespace DlgExtract
 {
     partial class Program
     {
