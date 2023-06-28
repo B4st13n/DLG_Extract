@@ -1,20 +1,18 @@
-[![Build status](https://ci.appveyor.com/api/projects/status/ehq7d1k01nqufdjs?svg=true)](https://ci.appveyor.com/project/igi/tlktosql)
+
 
 ---
 
-# TlkToSql
+# DlgExtract
 
-A command line utility to read string information from dialog.tlk files used Infinity Engine to an SQLite database
-
+A command line utility to read dialog file from any *.dlg files and string information from dialog.tlk files used Infinity Engine to extract as text files.
 
 ## Usage
 ``` 
-tlktosql dialog.tlk game
+dlgextract c:/resource
 ```
 
-**dialog.tlk**: path to the dialog.tlk file, e.g. /bgee/dialog.tlk
-
-**game**: game name, used to classify strings in the datbase, e.g. bgee
+The resource folder must contains the TLK and DLG files.
+The tool will create text files in c:/resource/TXT folder.
 
 ## Download
 
@@ -23,7 +21,7 @@ You can [download](https://github.com/btigi/tlktosql/releases/) the latest versi
 
 ## Technologies
 
-TlkToSql is written in C# Net Core 3.1.
+DlgExtract is written in C# Net 7.0.
 
 
 ## Compiling
@@ -32,22 +30,12 @@ To clone and run this application, you'll need [Git](https://git-scm.com) and [.
 
 ```
 # Clone this repository
-$ git clone https://github.com/btigi/tlktosql
-
-# Go into the repository
-$ cd tlktosql
-
-# Build  the app
-$ dotnet build
+$ git clone https://github.com/B4st13n/DLG_Extract
 ```
-
-
-## Changes
-
-0.7 Adds support for non-English dialog files.
  
-
 ## License
 
-TlkToSql is licensed under [CC BY-NC 4.0](https://creativecommons.org/licenses/by-nc/4.0/)
- 
+The code has been created as a Fork of
+[TlkToSql](https://github.com/btigi/tlktosql), a command line utility to read string information from dialog.tlk files used Infinity Engine to an SQLite database
+and is licensed under [CC BY-NC 4.0](https://creativecommons.org/licenses/by-nc/4.0/)
+
