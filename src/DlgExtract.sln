@@ -3,7 +3,7 @@ Microsoft Visual Studio Solution File, Format Version 12.00
 # Visual Studio Version 16
 VisualStudioVersion = 16.0.31205.134
 MinimumVisualStudioVersion = 10.0.40219.1
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "TlkToSql", "TlkToSql.csproj", "{EC48E76F-6C11-479E-B647-4FE1D837F46F}"
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "DlgExtract", "DlgExtract.csproj", "{EC48E76F-6C11-479E-B647-4FE1D837F46F}"
 EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
