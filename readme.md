@@ -16,10 +16,6 @@ The tool will create text files in c:/resource/TXT folder.
 
 To extract the DLG file from the game you must use [Near Infinity Browser](https://github.com/NearInfinityBrowser/NearInfinity) or any other similar tool that can extract DLG file from BIF files.
 
-## Download
-
-You can [download](https://github.com/btigi/tlktosql/releases/) the latest version of tlktosql for Windows.
-
 
 ## Technologies
 
