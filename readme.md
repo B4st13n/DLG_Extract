@@ -4,7 +4,7 @@
 
 # DlgExtract
 
-A command line utility to read dialog file from any *.dlg files and string information from dialog.tlk files used Infinity Engine to extract as text files.
+A command line utility to read dialog file from any DLG files and string information from dialog.tlk files used Infinity Engine to extract as text files.
 
 ## Usage
 ``` 
