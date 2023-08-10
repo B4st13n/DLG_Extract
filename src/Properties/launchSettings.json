@@ -2,7 +2,7 @@
   "profiles": {
     "TlkToSql": {
       "commandName": "Project",
-      "commandLineArgs": "\"C:\\Users\\basti\\source\\repos\\DLG_Extract\\src\\Resources\""
+      "commandLineArgs": "\"C:\\Projects\\InfinitySpeechProject\\Baldur's Gate\""
     }
   }
 }

@@ -66,6 +66,7 @@ namespace DlgExtract
                             Name = dlgFile.CharacterName,
                             Strref = state.Strref,
                             Text = tlkFile.Strings.Where(y => y.Strref == state.Strref).SingleOrDefault()?.Text,
+                            Sound = tlkFile.Strings.Where(y => y.Strref == state.Strref).SingleOrDefault()?.Sound,
                         };
                         dialogs.Add(dialog);
                     }
@@ -78,12 +79,32 @@ namespace DlgExtract
                 {
                     // I must save the text file of the dialogue here
                     var min = Math.Min(dialog.Text.Length, 20);
-                    var fileName = dialog.Text.Substring(0, min).Trim();
-                    fileName = Regex.Replace(fileName, @"[^0-9a-zA-Z .,!&]+", "");
-                    fileName = $@"{dialog.Name}_{dialog.Strref}_{fileName}.txt";
-                    fileName = $@"{args[0]}\TXT\{dialog.Name}\{fileName}";
-                    Directory.CreateDirectory(Path.GetDirectoryName(fileName));
-                    File.WriteAllText(fileName, dialog.Text);
+                    var rawText = dialog.Text.Substring(0, min).Trim();
+                    var cleanText = Regex.Replace(rawText, @"[^0-9a-zA-Z .,!&]+", "");
+                    var fileName = $@"{dialog.Name}_{dialog.Strref}_{cleanText}";
+
+                    #region check if a sound exist
+                    // If sound exist then look for associated file.
+                    // Check if a sound is associated
+                    if (!string.IsNullOrWhiteSpace(dialog.Sound))
+                    {
+                        var wavFilePath = Directory.GetFiles(args[0], $"{dialog.Sound}.WAV", SearchOption.AllDirectories).SingleOrDefault();
+                        // Check if a WAV file of this sound exist
+                        if (!string.IsNullOrWhiteSpace(wavFilePath))
+                        {
+                            fileName = $@"{fileName} [{dialog.Sound}]"; // Append the sound code
+                            var linkPath = $@"{args[0]}\EXPORT\{dialog.Name}\{dialog.Sound}.lnk"; // link path. Where to save the link.
+                            var relativePathToSound = wavFilePath.Replace(args[0], @"..\.."); // Relative path to sound file.
+                            Directory.CreateDirectory(Path.GetDirectoryName(linkPath));
+                            File.CreateSymbolicLink(linkPath, relativePathToSound);
+                        }
+                    }
+                    #endregion
+
+                    var path = $@"{args[0]}\EXPORT\{dialog.Name}\{fileName}.txt";
+                    Directory.CreateDirectory(Path.GetDirectoryName(path));
+                    File.WriteAllText(path, dialog.Text);
+
                 }
                 catch (Exception exception)
                 {
