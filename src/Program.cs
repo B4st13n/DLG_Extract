@@ -93,15 +93,15 @@ namespace DlgExtract
                         if (!string.IsNullOrWhiteSpace(wavFilePath))
                         {
                             fileName = $@"{fileName} [{dialog.Sound}]"; // Append the sound code
-                            var linkPath = $@"{args[0]}\EXPORT\{dialog.Name}\{dialog.Sound}.lnk"; // link path. Where to save the link.
-                            var relativePathToSound = wavFilePath.Replace(args[0], @"..\.."); // Relative path to sound file.
-                            Directory.CreateDirectory(Path.GetDirectoryName(linkPath));
-                            File.CreateSymbolicLink(linkPath, relativePathToSound);
+                            //var linkPath = $@"{args[0]}\EXPORT\{dialog.Name}\{dialog.Sound}.lnk"; // link path. Where to save the link.
+                            //var relativePathToSound = wavFilePath.Replace(args[0], @"..\.."); // Relative path to sound file.
+                            //Directory.CreateDirectory(Path.GetDirectoryName(linkPath));
+                            //File.CreateSymbolicLink(linkPath, relativePathToSound);
                         }
                     }
                     #endregion
 
-                    var path = $@"{args[0]}\EXPORT\{dialog.Name}\{fileName}.txt";
+                    var path = $@"{args[0]}\TXT\{dialog.Name}\{fileName}.txt";
                     Directory.CreateDirectory(Path.GetDirectoryName(path));
                     File.WriteAllText(path, dialog.Text);
 
