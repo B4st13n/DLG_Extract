@@ -37,7 +37,7 @@ namespace DlgExtract
             {
                 var tlkFile = tlkReader.Read(path);
                 tlkFiles.Add(tlkFile);
-                Console.WriteLine($"Added {tlkFile.Strings.Count} entries");
+                Console.WriteLine($"TLK: Added {tlkFile.Strings.Count} entries");
             }
             #endregion
 
@@ -49,7 +49,7 @@ namespace DlgExtract
             {
                 var dlgFile = dlgReader.Read(path);
                 dlgFiles.Add(dlgFile);
-                Console.WriteLine($"Added {dlgFile.CharacterName} {dlgFile.States.Count} entries");
+                Console.WriteLine($"DLG: Added {dlgFile.CharacterName} {dlgFile.States.Count} entries");
             }
             #endregion
 
@@ -104,7 +104,7 @@ namespace DlgExtract
                     var path = $@"{args[0]}\TXT\{dialog.Name}\{fileName}.txt";
                     Directory.CreateDirectory(Path.GetDirectoryName(path));
                     File.WriteAllText(path, dialog.Text);
-
+                    Console.WriteLine($"TXT: Exported {path}");
                 }
                 catch (Exception exception)
                 {
